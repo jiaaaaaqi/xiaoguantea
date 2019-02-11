@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+    background-color: #EDEDED;
+    font-size: 12px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/*header*/
+header{
+    width: 1420px;
+    margin: 0 auto;
+    height: 79px;
+    display: flex;
+    background-color: #89674C;
+}
+header .top{
+    position: relative;
+    width: 1220px;
+    margin: 0 auto;
+    height: 100%;
+}
+header .logo{
+    width: 92px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+header .logo a img{
+    display: block;
+    width: 100%;
+    height: 42px;
+    margin: 0 auto;
+    position: relative;
+    top: 21px;
+    left: 0;
+}
+
+/* nav */
+header nav{
+    padding-left: 270px;
+}
+header nav .nav-item{
+    float: left;
+    font-size: 14px;
+    line-height: 76px;
+    display: block;
+    height: 100%;
+    margin: 0 30px;
+    color: #e1d1b9;
+    text-decoration: none;
+}
+header nav .nav-item:hover{
+    border-bottom: 3px solid #fff;
+    color: #fff;
+}
+header .quick{
+    padding-top: 6px;
+    height: 30px;
+    z-index: 99;
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    right: 0;
+}
+header .quick span{
+    height: 12px;
+    width: 1px;
+    background-color: #b1977d;
+    display: inline-block;
+    vertical-align: middle;
+}
+header .quick a{
+    background: url(../images/icon.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+header .quick .search{
+    margin-right: 0;
+    background-position: -100px -6px;
+}
+header .quick .user{
+    background-position: -7px -6px;
+}
+header .quick .feedback{
+    background-position: -53px -6px;
+}
+
+/*登录页面css --start--*/
+.loginWrapper{
+    margin:210px auto 200px;
+}
+.loginMain{
+    border-top:1px solid #c9c9c9;
+    border-bottom:1px solid #c9c9c9;
+}
+.loginTitle{
+    font-size:45px;
+    color:#9d6d4a;
+    text-align: center;
+    margin-bottom:60px;
+}
+.loginBox,.passwordBox{
+    width:400px;
+    margin:0 auto;
+}
+.users{
+    width:398px;
+    margin:0 auto;
+    margin-top:25px;
+    border:1px solid #9d6d4a;
+}
+.users input{
+    width:395px;
+    padding:10px;
+    font-size:16px;
+    color:#9d6d4a;
+    border:none;
+}
+.loginBox div input:-moz-placeholder,
+.passwordBox div input:-moz-placeholder{
+    color: #9d6d4a;
+}
+.loginBox div input:-ms-input-placeholder,
+.passwordBox div input:-ms-input-placeholder{
+    color: #9d6d4a;
+}
+.loginBox div input::-webkit-input-placeholder,
+.passwordBox div input::-webkit-input-placeholder{
+    color: #9d6d4a;
+}
+.loginBox .loginBtn,.loginBox .nextBtn,.loginBox .resetBtn{
+    width:180px;
+    font-size:16px;
+    padding:12px;
+    border:none;
+    text-align:center;
+    background-color: #9d6d4a;
+    margin:40px auto;
+    color:#e4dad5;
+    cursor:pointer;
+}
+.loginFooter div{
+    width:350px;
+    margin:50px auto 0;
+}
+.loginFooter div p{
+    color:#8f9099;
+    font-size:14px;
+    margin-left:40px;
+}
+.loginFooter div a{
+    color:#9d6d4a;
+    font-size:14px;
+}
+/*登录页面css --end--*/
+
+/* 尾部 */
+.footerWrapper{
+	border-top: 1px solid #9d6d4a;
+	margin-top: 45px;
+}
+.footer{
+	width: 1230px;
+	margin: -1px auto 0;
+	padding: 38px 0;
+	border-top: 1px solid #9d6d4a;
+}
+.toEnsure{
+    height: 29px;
+}
+.toEnsure img{
+	float: left;
+	margin-right: 167px;
+}
+.toEnsure img:last-child{
+	margin-right: 0;
+}
+.toEnsure span{
+	float: left;
+	font-size: 18px;
+	color: #9d6d4a;
+	margin-left: -162px;
+	margin-right: 167px;
+	margin-top: 3px;
+}
+.footerNav{
+	margin-top: 30px;
+}
+.footerNav li{
+	float: left;
+	font-size: 14px;
+	border-right: 1px solid #9d6d4a;
+	padding-right: 20px;
+	margin-right: 20px
+}
+.footerNav li:last-child{
+	border-right: none;
+	padding-right: 0;
+	margin-right: 0;
+}
+.footerNav li a{
+	color: #9d6d4a;
+}
+.weixin{
+	width: 400px;
+	background: #fff;
+	padding: 30px;
+	text-align: center;
+	color: #000;
+}
+.weixin img{
+	margin: 0 auto 10px;
+}
