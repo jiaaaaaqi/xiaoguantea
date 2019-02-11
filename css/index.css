@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+    background-color:#000!important;
+    font-size: 12px;
+}
+li{
+    list-style: none;
+}
+/*header*/
+header{
+    width: 1420px;
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    background-color: #89674C;
+    border-bottom: 1px solid #36383a;
+}
+header .top{
+    position: relative;
+    width: 1220px;
+    margin: 0 auto;
+    height: 100%;
+}
+header .logo{
+    width: 92px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+header .logo a img{
+    display: block;
+    width: 100%;
+    height: 42px;
+    margin: 0 auto;
+    position: relative;
+    top: 21px;
+    left: 0;
+}
+header nav{
+    padding-left: 270px;
+}
+header nav .nav-item{
+    float: left;
+    font-size: 14px;
+    line-height: 78px;
+    display: block;
+    height: 100%;
+    margin: 0 30px;
+    color: #e1d1b9;
+    text-decoration: none;
+}
+header nav .nav-item:hover{
+    border-bottom: 3px solid #fff;
+    color: #fff;
+}
+header .quick{
+    padding-top: 6px;
+    height: 30px;
+    z-index: 99;
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    right: 0;
+}
+header .quick span{
+    height: 12px;
+    width: 1px;
+    background-color: #b1977d;
+    display: inline-block;
+    vertical-align: middle;
+}
+header .quick a{
+    background: url(../images/icon.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+header .quick .search{
+    margin-right: 0;
+    background-position: -100px -6px;
+}
+header .quick .user{
+    background-position: -7px -6px;
+}
+header .quick .feedback{
+    background-position: -53px -6px;
+}
+
+/* section*/
+section{
+    position: relative;
+}
+section #myCarousel{
+    width: 1420px;
+    height: 730px;
+    position: relative;
+    margin: 0 auto;
+}
+section .section2{
+    
+    width: 465px;
+    padding:60px 0 133px
+}
+section .section2 .section-inner{
+    border-top: 1px solid #1b1614;
+    padding-top: 30px;
+    width: 1280px;
+    margin: 0 auto;
+}
+section .section2 .section-inner .small-images-detailed{
+    height: 240px;
+    width: 100%;
+}
+section .section2 .section-inner .small-images-detailed li{
+    position: relative;
+}
+section .section2 .section-inner .small-images-detailed li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
