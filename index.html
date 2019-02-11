@@ -47,30 +47,128 @@
         <div class="carousel-inner">
             <div class="item active">
                 <img src="images/banner-1.jpg" />
+                <div class="section-detailed">
+                    <h3>小罐茶<span style="font-size:20px; vertical-align:text-top;">®</span></h3>
+                    <p>8位制茶大师，敬你一杯中国好茶</p>
+                </div>
              </div>
             <div class="item">
                 <img src="images/banner-2.jpg" />
+                <div class="section-detailed">
+                    <h3>8位制茶大师</h3>
+                    <p>奠基中国茶新未来</p>
+                </div>
             </div>
              <div class="item">
                 <img src="images/banner-3.jpg" />
+                <div class="section-detailed" id="section-detailed3">
+                    <h3>每一罐，都是充氮保鲜</h3>
+                    <p>小罐保鲜，茶叶常温保鲜的重大突破</p>
+                    <p style="font-size:12px">（大红袍、白茶、普洱茶除外）</p>
+                </div>
              </div>
             <div class="item">
                 <img src="images/banner-4.jpg" />
+                <div class="section-detailed">
+                    <h3>现代派中国茶</h3>
+                    <p>喝茶，更高雅的社交</p>
+                </div>
             </div>
         </div>
       </div>
       <div class="section2">
           <div class="section-inner">
-              <ul class="small-images-detailed">
-                  <li><a href="##"><img src="images/detailed-1.jpg" alt=""></a></li>
-                  <li><a href="##"><img src="images/detailed-2.jpg" alt=""></a></li>
-                  <li><a href="##"><img src="images/detailed-3.jpg" alt=""></a></li>
-              </ul>
+            <ul class="small-images-detailed">
+                <li>
+                    <a href="##">      
+                        <img src="images/detailed-1.jpg" alt="">
+                        <div class="section-detailed">
+                            <h3>扛鼎之作</h3>
+                            <p>
+                                <span>8位制茶大师，共同缔造小罐茶</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="##">
+                        <img src="images/detailed-2.jpg" alt="">
+                        <div class="section-detailed">
+                            <h3>惊艳登场</h3>
+                            <p>
+                                <span>茶叶包装的一次巨大创新</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="##">
+                        <img src="images/detailed-3.jpg" alt="">
+                        <div class="section-detailed">
+                            <h3>美好体验</h3>
+                            <p>
+                                <span>我们重新定义了茶叶消费体验</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
           </div>
       </div>
     </section>
     <footer>
-        
+        <div class="foot">          
+            <div class="foot_left">
+                <div class="link">
+                    <a href="##">关于小罐茶</a>
+                    <i class="cut"></i>
+                    <a href="##">服务与支持</a>
+                    <i class="cut"></i>
+                    <a href="##">新闻中心</a>
+                    <i class="cut"></i>
+                    <a href="##">有偿资讯</a>
+                    <i class="cut"></i>
+                    <a href="##"><img src="images/weixin.png" class="weixin">官方微信</a>
+                    <i class="cut"></i>
+                    <a href="##"><img src="images/weibo.png" class="weibo">官方微博</a>
+                    <i class="cut"></i>
+                    <a href="##"><span class="big">京东旗舰店</span></a>
+                    <i class="cut"></i>
+                    <a href="##"><span class="big">天猫旗舰店</span></a>
+                </div>
+                <div class="copyright">
+                    <i>Copyright © 2015 XIAOGUANTEA. All Rights Reserved.</i>
+                    <span class="filing">
+                            京ICP备15010357号
+                    </span>
+                    <span class="filing">        
+                            京ICP证161099号
+                    </span>
+                    <img src="images/bottom_small_img.png" alt="">
+                </div>
+            </div>
+            <div class="foot_right">
+                <div class="contact">
+                    <span>联系电话:</span>
+                    <span class="phone">400-628-8181</span>
+                </div>
+            </div>
+            <a href="javascript:;" class="gotop" id="scroll" sty>返回顶部</a>
+            <script type="text/javascript">
+                $(function(){
+                    showScroll();
+                    function showScroll(){
+                        $(window).scroll( function() { 
+                            var scrollValue=$(window).scrollTop();
+                            scrollValue > 100 ? $('.gotop').fadeIn():$('.gotop').fadeOut();
+                        } );	
+                        $('#scroll').click(function(){
+                            $("html,body").animate({scrollTop:0},500);	
+                        });	
+                    }
+                })
+            </script>
+        </div>
     </footer>
   </body>
 </html>
