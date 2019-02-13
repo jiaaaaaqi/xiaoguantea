@@ -1,18 +1,21 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-}
-body{
-    background-color: #EDEDED;
-    font-size: 12px;
-}
-li{
-    list-style: none;
-}
-a{
-    text-decoration: none;
-}
+body,textarea,input,select,option{ font-size:12px; color:#333; font-family: "微软雅黑",Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif; }
+body,h1,h2,h3,h4,h5,h6,ol,ul,dl,dd,p,textarea,input,select,option,form{ margin:0; }
+ol,ul,textarea,input,option,table,tr,th,td{ padding:0; }
+a{ text-decoration:none; outline:none; color:#333; }
+.clear{ clear:both; height:0; overflow:hidden; }
+textarea{ overflow:auto; resize:none; }
+h1,h2,h3,h4,h5,h6{ font-size:100%; }
+table{ border-collapse:collapse; }
+ol,ul{ list-style-type:none; }
+a img{ border:none; }
+input:focus{outline: none;}
+.fl{ float:left; }
+.fr{ float:right; }
+.clears:after{ content:'.'; display:block; height:0; clear:both; visibility:hidden; }
+.clears{ zoom:1; }
+img{ display:block; }
+body{ background: #ededed; }
+
 /*header*/
 header{
     width: 1420px;
@@ -122,22 +125,15 @@ header .quick .feedback{
     border:1px solid #9d6d4a;
 }
 .users input{
-    width:395px;
+    width:378px;
     padding:10px;
     font-size:16px;
     color:#9d6d4a;
     border:none;
 }
-.loginBox div input:-moz-placeholder,
-.passwordBox div input:-moz-placeholder{
-    color: #9d6d4a;
-}
-.loginBox div input:-ms-input-placeholder,
-.passwordBox div input:-ms-input-placeholder{
-    color: #9d6d4a;
-}
-.loginBox div input::-webkit-input-placeholder,
-.passwordBox div input::-webkit-input-placeholder{
+
+.loginBox div input::placeholder,
+.passwordBox div input::placeholder{
     color: #9d6d4a;
 }
 .loginBox .loginBtn,.loginBox .nextBtn,.loginBox .resetBtn{
@@ -165,6 +161,87 @@ header .quick .feedback{
     font-size:14px;
 }
 /*登录页面css --end--*/
+
+/*注册页面css --start--*/
+.loginBox .commonBox,
+.passwordBox .commonBox{
+    font-size:16px;
+    color:#f00;
+    line-height:30px;
+}
+.loginBox .usersHalf{
+    width:190px;
+    margin-top:25px;
+    border:1px solid #9d6d4a;
+}
+.loginBox .usersHalf input{
+    width:170px;
+    padding:10px;
+    font-size:16px;
+    color:#9d6d4a;
+    border:none;
+}
+.loginBox .verifyCode{
+    margin-top:25px;
+}
+.loginBox .verifyCode .verifyArea{
+    width:240px;
+    color: #9d6d4a;
+    border: none;
+}
+.loginBox .verifyCode .verifyArea input{
+    padding: 10px;
+    font-size: 16px;
+    border:1px solid #9d6d4a;
+    width:90%;
+}
+.loginBox .verifyCode .verifySend{
+    width:140px;
+    height:40px;
+    margin-left:15px;
+    line-height:40px;
+    color:#e4dad5;
+    font-size: 16px;
+    background-color: #9d6d4a;
+    cursor:pointer;
+    text-align: center;
+}
+.passwordBox span{
+    line-height: 30px;
+    font-size:14px;
+    color:#676767;
+}
+.passwordBox span:first-child i{
+    font-style:normal;
+    font-size:14px;
+    color:#9d6d4a;
+    line-height: 30px;
+}
+.passwordBox .submitBtn{
+    width:376px;
+    font-size:16px;
+    padding:12px;
+    border:none;
+    text-align:center;
+    background-color: #9d6d4a;
+    margin:20px auto 40px;
+    color:#e4dad5;
+    cursor:pointer;
+}
+/* 图形验证码 */
+#picyzm{
+    width: 100px;
+    height: 40px;
+    display: inline-block;
+    margin: 0 30px;
+}
+#verifyCodeDemo{
+    width: 100%;
+    display: flex;
+    margin-top: 200px;
+    justify-content: center;
+}
+/*注册页面css --end--*/
 
 /* 尾部 */
 .footerWrapper{

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/login.css">  
+    <title>小罐茶-注册</title>
+</head>
+<body>
+    <header>
+        <div class="top">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="logo" />
+                </a>
+            </div>
+            <nav>
+                <a href="##" class="nav-item">小罐茶</a>
+                <a href="##" class="nav-item">制茶大师</a>
+                <a href="##" class="nav-item">小罐茶具</a>
+                <a href="##" class="nav-item">限量版黑罐</a>
+                <a href="##" class="nav-item">在线商店</a>
+                <a href="##" class="nav-item">招商</a>
+                <div class="quick">
+                    <span></span>
+                    <a href="##" class="search"></a>
+                    <a href="##" class="user"></a>
+                    <a href="##" class="feedback"></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="loginWrapper">
+            <div class="loginTitle">注册小罐茶用户</div>
+            <div class="loginMain">
+                <div class="loginBox">
+                    <div class="userOperator users">
+                        <input type="phone" placeholder="中国(+86)" name="operator" id="operator" readonly="readonly">
+                    </div>
+                    <div class="userPhone users">
+                        <input type="phone" placeholder="请输入您的手机号(必填)" name="phone" id="phone">
+                    </div>
+                    <div class="userpass users">
+                        <input type="password" placeholder="请输入您的密码" name="password" id="password"/>
+                    </div>
+                    <div class="userpass users">
+                        <input type="password" placeholder="请再次输入您的密码" name="repassword" id="repassword"/>
+                    </div>
+                    <p class="commonBox phoneBox hide"></p>
+                    <div class="verifyCode clears">
+                        <div class="verifyArea fl">
+                            <input id="imgCode" type="text" value="" placeholder="请输入图形验证码" maxlength="4">
+                        </div>
+                        <div class="fl"><p id="picyzm"></p></div>
+                    </div>
+                    <div class="nextBtn" id="nextBtn">下一步</div>
+                    <script type="text/javascript" src="js/gVerify.js"></script>
+                    <script type="text/javascript">
+                        //获取元素
+                        function $(str){//#box .cls  p
+                            if(str.charAt(0)=="#"){
+                                return document.getElementById(str.substring(1));
+                            }else if(str.charAt(0)=="."){
+                                return document.getElementsByClassName(str.substring(1));
+                            }else{
+                                return document.getElementsByTagName(str);
+                            }
+                        }
+                        //初始化验证码
+                        var verifyCode = new GVerify({
+                            id:"picyzm",    //容器的ID
+                            type:"number"    //图形验证码的类型：blend-数字字母混合类型（默认）、number-纯数字、letter-纯字母
+                        });
+                
+                        //刷新验证码
+                        //verifyCode.refresh();
+                        //校验验证码
+                        //verifyCode.validate('校验的值');    //如果校验正确返回ture，校验错误返回false
+                        //验证
+                        $("#imgCode").onblur=(function () { 
+                            console.log(res);
+                            var res = verifyCode.validate($("#imgCode").value);
+                            if(res){
+                                console.log("验证通过");
+                            }else{
+                                console.log("验证码错误");
+                            }                           
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="loginFooter">
+                <div class="clears">
+                    <p class="fl">如果您已经有小罐茶账户，则可在此<a class="goRegister" href="login.html">登录</a></p>
+                </div>
+            </div>
+        </div>       
+    </section>
+    <footer>
+        <div class="footerWrapper">
+            <div class="footer">
+                <div class="toEnsure">
+                    <img src="images/telephone.png">
+                    <span>(400-004-5028)</span>
+                    <img src="images/seven.png">
+                    <img src="images/fiften.png">
+                    <img src="images/sf.png">
+                </div>
+                <ul class="footerNav">
+                    <li><a href="javascript:void(0)">订单操作</a></li>
+                    <li><a href="javascript:void(0)" id="officialLetter">官方微信</a></li>
+                    <li><a href="javascript:void(0)">联系我们</a></li>
+                    <li><a href="javascript:void(0)">防伪查询</a></li>
+                    <li><a href="javascript:void(0)">零售网点</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
