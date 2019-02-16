@@ -1,3 +1,4 @@
+/* 初始化 */
 body,textarea,input,select,option{ font-size:12px; color:#333; font-family: "微软雅黑",Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif; }
 body,h1,h2,h3,h4,h5,h6,ol,ul,dl,dd,p,textarea,input,select,option,form{ margin:0; }
 ol,ul,textarea,input,option,table,tr,th,td{ padding:0; }
@@ -99,6 +100,7 @@ header .quick .user{
 header .quick .feedback{
     background-position: -53px -6px;
 }
+/* 头部结束 */
 
 /*登录页面css --start--*/
 .loginWrapper{
@@ -161,6 +163,7 @@ header .quick .feedback{
     font-size:14px;
 }
 /*登录页面css --end--*/
+
 
 /*注册页面css --start--*/
 .loginBox .commonBox,
@@ -243,10 +246,13 @@ header .quick .feedback{
 }
 /*注册页面css --end--*/
 
+
+
 /* 尾部 */
 .footerWrapper{
 	border-top: 1px solid #9d6d4a;
-	margin-top: 45px;
+    margin-top: 45px;
+    position: relative;
 }
 .footer{
 	width: 1230px;
@@ -289,6 +295,21 @@ header .quick .feedback{
 }
 .footerNav li a{
 	color: #9d6d4a;
+}
+footer .footerWrapper #scroll{
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background: url(../images/gotop.png) no-repeat right 4px;
+    font-size: 12px;
+    color: #5f4838;
+    padding-right: 33px;
+    text-decoration: none;
+}
+footer .footerWrapper #scroll:hover {
+    color: #ccac82;
+    text-decoration: none;
+    background-position-y: -13px;
 }
 .weixin{
 	width: 400px;
