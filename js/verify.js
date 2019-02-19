@@ -1,33 +1,32 @@
-$(function(){
+$(function () {
     var show_num = [];
     draw(show_num);
 
-    $("#imgCode").on('blur',function(){
-        draw(show_num);
-    })
-    $(".imgCode").on('blur',function(){
+    $("#imgCode").on('blur', function () {
         var val = $(".input-val").val().toLowerCase();
         var num = show_num.join("");
-        if(val==''){
-           $("#yzmTit").css("display", "block");
-           $("#yzmTit").html("验证码不能为空！！！");
-           $("#yzmTit").focus();
-        }else if(val == num){
-            $(".input-val").val('');
-            draw(show_num);
+        console.log(num);
+        if (val == '') {
+            $("#yzmTit").html("<font style='color:#F63B21'>验证码不能为空！！！</font>");
+           // $("#imgCode").focus();
 
-        }else{
-            $("#yzmTit").css("display", "block");
-           $("#yzmTit").html("验证码输入错误，请重新输入！！！");
+        } else if (val == num) {
+		$("#yzmTit").html("<font style='color:#A5C11B'>验证码正确</font>");  
+        // $(".input-val").val('');
+           // draw(show_num);
+
+        } else {
+            $("#yzmTit").html("<font style='color:#F63B21'>验证码输入错误，请重新输入！！！</font>");
+            $("#imgCode").focus();
             $(".input-val").val('');
-            draw(show_num);
+            //draw(show_num);
         }
     })
 })
 
 function draw(show_num) {
-    var canvas_width=$('#canvas').width();
-    var canvas_height=$('#canvas').height();
+    var canvas_width = $('#canvas').width();
+    var canvas_height = $('#canvas').height();
     var canvas = document.getElementById("canvas");//获取到canvas的对象，演员
     var context = canvas.getContext("2d");//获取到canvas画图的环境，演员表演的舞台
     canvas.width = canvas_width;
@@ -35,7 +34,7 @@ function draw(show_num) {
     var sCode = "A,B,C,E,F,G,H,J,K,L,M,N,P,Q,R,S,T,W,X,Y,Z,1,2,3,4,5,6,7,8,9,0";
     var aCode = sCode.split(",");
     var aLength = aCode.length;//获取到数组的长度
-    
+
     for (var i = 0; i <= 3; i++) {
         var j = Math.floor(Math.random() * aLength);//获取到随机的索引值
         var deg = Math.random() * 30 * Math.PI / 180;//产生0~30之间的随机弧度

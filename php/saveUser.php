@@ -2,8 +2,8 @@
 	header("content-type","text/html;charset=utf-8");
 	
 	//一、接收前端传来的数据
-	$userId = $_GET["username"];
-	$userPass = $_GET["password"];
+	$userId = $_POST["username"];
+	$userPass = $_POST["password"];
 	//二、保存数据
 	//1、建立连接并选择数据库
 	$con = mysql_connect("localhost","root","root");
