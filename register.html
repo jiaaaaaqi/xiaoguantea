@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/login.css">
     <script type="text/javascript" src="js/gVerify.js"></script>
-    <script src="js/register.js"></script>  
+    <script src="js/jquery-1.9.1.min.js"></script>
     <title>小罐茶-注册</title>
 </head>
 <body>
@@ -59,7 +59,7 @@
                         <div class="fl"><p id="picyzm"></p></div>
                         <p class="commonBox yzmReg hide" id="yzmTit"> </p>
                     </div>
-                    <div class="nextBtn" id="nextBtn">下一步</div>
+                    <div class="nextBtn" id="nextBtn" >下一步</div>
                 </div>
             </div>
             <div class="loginFooter">
@@ -67,7 +67,8 @@
                     <p class="fl">如果您已经有小罐茶账户，则可在此<a class="goRegister" href="login.html">登录</a></p>
                 </div>
             </div>
-        </div>       
+        </div>   
+    <script src="js/register.js"></script> 
     </section>
     <footer>
         <div class="footerWrapper">
@@ -93,6 +94,16 @@
 </html>
 <script>
 //初始化验证码
+ //获取元素
+ function $(str){//#box .cls  p
+    if(str.charAt(0)=="#"){
+        return document.getElementById(str.substring(1));
+    }else if(str.charAt(0)=="."){
+        return document.getElementsByClassName(str.substring(1));
+    }else{
+        return document.getElementsByTagName(str);
+    }
+}
 var verifyCode = new GVerify({
     id:"picyzm",    //容器的ID
     type:"number"    //图形验证码的类型：blend-数字字母混合类型（默认）、number-纯数字、letter-纯字母
