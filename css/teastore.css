@@ -1,1 +1,249 @@
-.indexBannerWrapper{position:relative;z-index:10}.indexBanner{width:1230px;margin:0 auto;padding:20px 0}.bannerBar li{float:left;font-size:14px;line-height:35px;color:#676767;margin-left:25px}.bannerBar li a{padding-right:25px;color:#676767}.bannerBar li i{font-style:normal;font-size:14px}.bannerBar li a:hover{font-weight:bold}.bannerBar li.active span{font-weight:bold;padding-right:15px}.goodsListWrapper{position:absolute;width:100%;padding-top:36px;background:#fff;left:0;top:50px;display:none;border-top:1px solid #ccc}.goodsListWrapper.active{display:block}.goodsListsPos{width:1230px;margin:0 auto;text-align:center}.goodsListsPos li{float:left;width:206px;margin-right:0}.imgBlock{border-right:1px solid #c9c9c9}.goodsListsPos li:last-child .imgBlock{border-right:none}.goodsListWrapper li .imgBlock a,.goodsListWrapper li .imgBlock img{display:block;width:150px;height:150px;margin:0 auto;padding-right:0}.goodsListsPos ul{display:inline-block}.goodsListsPos h3{font-size:18px;line-height:1em;color:#000;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:5px}.goodsListsPos p{font-size:14px;line-height:1em;color:#000;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:20px}.goodsListsPos b{display:block;font-size:16px;line-height:1em;color:#bd0000;margin-top:20px}.addShopcart{margin-top:7px;margin-right:20px}.addShopcart a{display:block;width:27px;height:20px;background:url("../image/shopcart.jpg") 0 0 no-repeat;background-size:contain}.smallTea{margin-top:27px}.smallTea img{float:left;width:306px;height:203px;margin-right:2px;cursor:pointer}.smallTea img:last-child{margin-right:0}.productListWrapper{width:1230px;margin:0 auto}.productList{background-color:#ffffff;padding:14px 0;margin-bottom:30px}.productList li{width:33%;height:520px;text-align:center;border-right:1px solid #bfbfbf}.productList li:last-child{border-right:none}.productList li .imgBox{width:100%;height:400px;padding-top:10px;cursor:pointer}.hotList li .imgBox{width:100%;height:260px;padding-top:30px;cursor:pointer}.productList li .imgBox img{display:block;margin:0 auto;width:380px;height:380px}.hotList li .imgBox img{display:block;margin:0 auto;width:230px;height:230px}.productList li .name,.hotList li .name{font-size:16px;line-height:32px;color:#000;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.productList li .slogan,.hotList li .slogan{font-size:14px;line-height:40px;color:#555;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.productList li .price,.hotList li .price{font-size:20px;line-height:50px;color:#bd0000}.hotGoods{background-color:#ffffff}.hotGoods h4{height:58px;line-height:58px;padding-left:45px;font-size:24px;color:#929292;border-bottom:2px solid #ededed}.hotList li{width:306px;height:430px;text-align:center;border-right:1px solid #ededed;cursor:pointer}.hotList li:last-child{border-right:none}
+@charset "UTF-8";
+/* 首页导航 */
+.indexBannerWrapper {
+  position: relative;
+  z-index: 10;
+}
+
+.indexBanner {
+  width: 1230px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.bannerBar li {
+  float: left;
+  font-size: 14px;
+  line-height: 35px;
+  color: #676767;
+  margin-left: 25px;
+}
+
+.bannerBar li a {
+  padding-right: 25px;
+  color: #676767;
+}
+
+.bannerBar li i {
+  font-style: normal;
+  font-size: 14px;
+}
+
+.bannerBar li a:hover {
+  font-weight: bold;
+}
+
+.bannerBar li.active span {
+  font-weight: bold;
+  padding-right: 15px;
+}
+
+.goodsListWrapper {
+  position: absolute;
+  width: 100%;
+  padding-top: 36px;
+  background: #fff;
+  left: 0;
+  top: 50px;
+  display: none;
+  border-top: 1px solid #ccc;
+}
+
+.goodsListWrapper.active {
+  display: block;
+}
+
+.goodsListsPos {
+  width: 1230px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.goodsListsPos li {
+  float: left;
+  width: 206px;
+  margin-right: 0;
+}
+
+.imgBlock {
+  border-right: 1px solid #c9c9c9;
+}
+
+.goodsListsPos li:last-child .imgBlock {
+  border-right: none;
+}
+
+.goodsListWrapper li .imgBlock a,
+.goodsListWrapper li .imgBlock img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  padding-right: 0;
+}
+
+.goodsListsPos ul {
+  display: inline-block;
+}
+
+.goodsListsPos h3 {
+  font-size: 18px;
+  line-height: 1em;
+  color: #000;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 5px;
+}
+
+.goodsListsPos p {
+  font-size: 14px;
+  line-height: 1em;
+  color: #000;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 20px;
+}
+
+.goodsListsPos b {
+  display: block;
+  font-size: 16px;
+  line-height: 1em;
+  color: #bd0000;
+  margin-top: 20px;
+}
+
+.addShopcart {
+  margin-top: 7px;
+  margin-right: 20px;
+}
+
+.addShopcart a {
+  display: block;
+  width: 27px;
+  height: 20px;
+  background: url("../image/shopcart.jpg") 0 0 no-repeat;
+  background-size: contain;
+}
+
+.smallTea {
+  margin-top: 27px;
+}
+
+.smallTea img {
+  float: left;
+  width: 306px;
+  height: 203px;
+  /*border-radius: 5px;*/
+  margin-right: 2px;
+  cursor: pointer;
+}
+
+.smallTea img:last-child {
+  margin-right: 0;
+}
+
+/*商品列表页面css --start--*/
+.productListWrapper {
+  width: 1230px;
+  margin: 0 auto;
+}
+
+.productList {
+  background-color: #ffffff;
+  padding: 14px 0;
+  margin-bottom: 30px;
+}
+
+.productList li {
+  width: 33%;
+  height: 520px;
+  text-align: center;
+  border-right: 1px solid #bfbfbf;
+}
+
+.productList li:last-child {
+  border-right: none;
+}
+
+.productList li .imgBox {
+  width: 100%;
+  height: 400px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.hotList li .imgBox {
+  width: 100%;
+  height: 260px;
+  padding-top: 30px;
+  cursor: pointer;
+}
+
+.productList li .imgBox img {
+  display: block;
+  margin: 0 auto;
+  width: 380px;
+  height: 380px;
+}
+
+.hotList li .imgBox img {
+  display: block;
+  margin: 0 auto;
+  width: 230px;
+  height: 230px;
+}
+
+.productList li .name, .hotList li .name {
+  font-size: 16px;
+  line-height: 32px;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.productList li .slogan, .hotList li .slogan {
+  font-size: 14px;
+  line-height: 40px;
+  color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.productList li .price, .hotList li .price {
+  font-size: 20px;
+  line-height: 50px;
+  color: #bd0000;
+}
+
+.hotGoods {
+  background-color: #ffffff;
+}
+
+.hotGoods h4 {
+  height: 58px;
+  line-height: 58px;
+  padding-left: 45px;
+  font-size: 24px;
+  color: #929292;
+  border-bottom: 2px solid #ededed;
+}
+
+.hotList li {
+  width: 306px;
+  height: 430px;
+  text-align: center;
+  border-right: 1px solid #ededed;
+  cursor: pointer;
+}
+
+.hotList li:last-child {
+  border-right: none;
+}
+
+/*商品列表页面css --end--*/

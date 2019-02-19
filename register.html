@@ -42,25 +42,25 @@
                     <div class="userOperator users">
                         <input type="phone" placeholder="中国(+86)" name="operator" id="operator" readonly="readonly">
                     </div>
-                    <div class="userPhone users">
+                    <div class="users">
                         <input type="phone" placeholder="请输入您的手机号(必填)" name="phone" id="phone">
                     </div>
-                    <p class="commonBox phoneReg hide" id="phoneTit">111</p>
-                    <div class="userpass users">
+                    <p class="commonBox" id="phoneTit"></p>
+                    <div class="users">
                         <input type="password" placeholder="请输入您的密码" name="password" id="password"/>
                     </div>
-                    <p class="commonBox pswReg hide" id="pswTit">222</p>
-                    <div class="userpass users">
+                    <p class="commonBox" id="pswTit"></p>
+                    <div class="users">
                         <input type="password" placeholder="请再次输入您的密码" name="repassword" id="repassword"/>
                     </div>
-                    <p class="commonBox rePswReg hide" id="rePswTit">333</p>     
+                    <p class="commonBox" id="rePswTit"></p>     
                                   
                     <div class="verifyCode clears">
                         <div class="verifyArea fl">
                             <input id="imgCode" type="text" class="input-val" placeholder="请输入图形验证码">
                         </div>
                         <div class="fl"><canvas id="canvas" width="100px" height="40px"></canvas></div>
-                        <p class="commonBox yzmReg hide" id="yzmTit"> </p>
+                        <p class="commonBox yzmReg" id="yzmTit"> </p>
                     </div>
                     <div class="nextBtn" id="nextBtn" >下一步</div>
                 </div>
@@ -71,7 +71,6 @@
                 </div>
             </div>
         </div>   
-    <script src="js/register.js"></script> 
     </section>
     <footer>
         <div class="footerWrapper">
@@ -97,19 +96,4 @@
 </html>
 <script>
 
-
-//刷新验证码
-//verifyCode.refresh();
-//校验验证码
-//verifyCode.validate('校验的值');    //如果校验正确返回ture，校验错误返回false
-//验证
-$("#imgCode").onblur=(function () { 
-    var res = verifyCode.validate($("#imgCode").value);
-    if(!res){      
-        $("#yzmTit").style.display = "block";
-        $("#yzmTit").innerHTML = "验证码错误或未输入验证码";
-    }else{
-        $("#yzmTit").style.display = "none";
-    }                   
-});
 </script>

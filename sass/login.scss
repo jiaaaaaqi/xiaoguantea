@@ -16,7 +16,7 @@ header{
             margin: 0 30px;
             color: #e1d1b9;
             text-decoration: none;
-            :hover{
+            &:hover{
                 border-bottom: 3px solid #fff;
                 color: #fff;
             }
@@ -145,10 +145,10 @@ header{
 
 
 /*注册页面css --start--*/
-.loginBox .commonBox,
-.passwordBox .commonBox{
+.loginBox .commonBox{
     font-size:16px;
     color:#f00;
+    height: 20px;
     line-height:30px;
 }
 .loginBox .usersHalf{
@@ -196,7 +196,7 @@ header{
         line-height: 30px;
         font-size:14px;
         color:#676767;
-        :first-child i{
+        &:first-child i{
             font-style:normal;
             font-size:14px;
             color:#9d6d4a;
@@ -237,11 +237,11 @@ header{
     img{
         float: left;
         margin-right: 167px;
-        
+        &:last-child{
+            margin-right: 0;
+        }
     }
-    img:last-child{
-        margin-right: 0;
-    }
+    
     span{
         float: left;
         font-size: 18px;
@@ -263,12 +263,13 @@ header{
         a{
             color: #9d6d4a;
         }
+        &:last-child{
+            border-right: none;
+            padding-right: 0;
+            margin-right: 0;
+        }
     }
-    li:last-child{
-        border-right: none;
-        padding-right: 0;
-        margin-right: 0;
-    }
+    
 }
 footer{
     .footerWrapper{
