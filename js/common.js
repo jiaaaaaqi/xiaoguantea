@@ -74,4 +74,3 @@ function removeCookie(key){
 	saveCookie(key,"",-1);
 }
 
-

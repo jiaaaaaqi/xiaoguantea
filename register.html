@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/login.css">
-    <script type="text/javascript" src="js/gVerify.js"></script>
-    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/verify.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/register.js"></script>
     <title>小罐茶-注册</title>
 </head>
 <body>
@@ -51,12 +53,13 @@
                     <div class="userpass users">
                         <input type="password" placeholder="请再次输入您的密码" name="repassword" id="repassword"/>
                     </div>
-                    <p class="commonBox rePswReg hide" id="rePswTit">333</p>                    
+                    <p class="commonBox rePswReg hide" id="rePswTit">333</p>     
+                                  
                     <div class="verifyCode clears">
                         <div class="verifyArea fl">
-                            <input id="imgCode" type="text" value="" placeholder="请输入图形验证码" maxlength="4">
+                            <input id="imgCode" type="text" class="input-val" placeholder="请输入图形验证码">
                         </div>
-                        <div class="fl"><p id="picyzm"></p></div>
+                        <div class="fl"><canvas id="canvas" width="100px" height="40px"></canvas></div>
                         <p class="commonBox yzmReg hide" id="yzmTit"> </p>
                     </div>
                     <div class="nextBtn" id="nextBtn" >下一步</div>
@@ -93,21 +96,7 @@
 </body>
 </html>
 <script>
-//初始化验证码
- //获取元素
- function $(str){//#box .cls  p
-    if(str.charAt(0)=="#"){
-        return document.getElementById(str.substring(1));
-    }else if(str.charAt(0)=="."){
-        return document.getElementsByClassName(str.substring(1));
-    }else{
-        return document.getElementsByTagName(str);
-    }
-}
-var verifyCode = new GVerify({
-    id:"picyzm",    //容器的ID
-    type:"number"    //图形验证码的类型：blend-数字字母混合类型（默认）、number-纯数字、letter-纯字母
-});
+
 
 //刷新验证码
 //verifyCode.refresh();
@@ -123,5 +112,4 @@ $("#imgCode").onblur=(function () {
         $("#yzmTit").style.display = "none";
     }                   
 });
-
 </script>

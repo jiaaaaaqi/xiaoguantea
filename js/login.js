@@ -1,6 +1,5 @@
 $(function(){		
 	$("#login").click(function(){
-		//1、
 		$.post(
 			"php/logincheck.php",
 			{

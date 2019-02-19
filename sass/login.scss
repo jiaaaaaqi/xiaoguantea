@@ -217,17 +217,11 @@ header{
 }
 
 /* 图形验证码 */
-#picyzm{
-    width: 100px;
-    height: 40px;
+#canvas{
     display: inline-block;
-    margin: 0 30px;
-}
-#verifyCodeDemo{
-    width: 100%;
-    display: flex;
-    margin-top: 200px;
-    justify-content: center;
+    border:1px solid #9d6d4a;
+    margin-left: 58px;
+    cursor: pointer;
 }
 /*注册页面css --end--*/
 

@@ -4,22 +4,21 @@ function checkPhone(phone){
 	var len = phone.length;
 	//大陆手机号码
 	if(len == 11){
-		//console.log(len);
 		if(!dl.exec(phone)){
 			console.log(this.value);
 			$("#phoneTit").innerHTML="请输入正确的手机号";
 			$("#phoneTit").style.display = "block";
-			return false;
+			$("#phone").focus();
+
 		}else{
 			$("#phoneTit").style.display="hidden";
 			checkuser(this.value);
 		}
 	}else{
+        $("#phone").focus();
 		$("#phoneTit").innerHTML="请输入11位手机号";
 		$("#phoneTit").style.display = "block";
-		return false;
 	}
-	return true;
 }
 
 //验证用户名是否存在
@@ -72,15 +71,13 @@ function checkuser(name){
 })();
 
 $("#phone").onblur = function(){
-	//console.log(this.value);
-	checkPhone(this.value);
-	
+	checkPhone($("#phone").value);
 }
 
 function zhuche() {
-    var str_phone = window.document.getElementById("phone").value;
-    var str_pass = window.document.getElementById("password").value;
-    var str_pass1 = window.document.getElementById("repassword").value;
+    var str_phone = document.getElementById("phone").value;
+    var str_pass = document.getElementById("password").value;
+    var str_pass1 = document.getElementById("repassword").value;
 
     if (rtrim(str_phone) == "") {
         alert("请输入您的手机号!");
