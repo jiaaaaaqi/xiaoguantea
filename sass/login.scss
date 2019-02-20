@@ -277,4 +277,19 @@ footer{
         margin-top: 45px;
         position: relative;
     }
+    .gotop{
+        position: absolute;
+        top: -50px;
+        right: 0;
+        background: url(../images/gotop.png) no-repeat right 4px;
+        font-size: 12px;
+        color: #5f4838;
+        padding-right: 33px;
+        text-decoration: none;
+        &:hover {
+            color: #ccac82;
+            text-decoration: none;
+            background-position-y: -13px;
+        }
+    }
 }

@@ -1,5 +1,125 @@
 @charset "UTF-8";
-/* 首页导航 */
+.bl{
+	display: block;
+}
+.searchPersonal{
+	position: absolute;
+	right: -8px;
+	top: 24px;
+	background:#89674c;
+}
+.searchBoxS{
+	width: 20px;
+	height: 20px;
+	padding: 4px 5px 4px 2px;
+	border: 1px solid #89674c;
+	overflow: hidden;
+}
+.searchBoxL{
+	width: 160px;
+	height: 20px;
+	padding: 4px 5px;
+	border: 1px solid #e1d1b9;
+	border-radius: 3px;
+	margin-right: 10px;
+	overflow: hidden;
+}
+.searchBoxS input,
+.searchBoxL input{
+	float: right;
+	width: 120px;
+	height: 20px;
+	line-height: 20px;
+	background: none;
+	border: none;
+	font-size: 14px;
+	color: #e1d1b9;
+}
+.searchBoxS input::-webkit-input-placeholder,
+.searchBoxL input::-webkit-input-placeholder{ /* WebKit browsers */
+	color:#e1d1b9;
+}
+.searchBoxS .searchIcon,
+.searchBoxL .searchIcon{
+	float: right;
+	width: 20px;
+	height: 20px;
+	background: url(../images/icon2x.png) -50px 0 no-repeat;
+	background-size: 67px 43px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.line{
+	width: 1px;
+	height: 12px;
+	background: #b1977d;
+	margin: 9px 12px;
+}
+.personalBoxS{
+	width: 20px;
+	height: 20px;
+	padding: 5px 0 0 0;
+	overflow: hidden;
+}
+.personalBoxLT,
+.personalBoxLB{
+	width: 92px;
+	position: relative;
+	z-index: 20;
+}
+.personalBoxS .personalIcon{
+	float: left;
+	width: 20px;
+	background: url(../images/icon2x.png) no-repeat;
+	background-size: 67px 43px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.personalBoxLT a,
+.personalBoxLB a{
+	display: block;
+	height: 19px;
+	line-height: 19px;
+	padding: 5px 10px 5px 15px;
+	font-size: 14px;
+	color: #e1d1b9;
+}
+.personalBoxLT a{
+	background: url(../images/dot-down.png) right -38px no-repeat;
+}
+.personalBoxLB a{
+	background: url(../images/dot-down.png) right 4px no-repeat;
+}
+.logoutBox{
+	position: absolute;
+	left: 14px;
+	top: 54px;
+	cursor: pointer;
+	background: #89674c;
+	display: none;
+}
+.logoutBox .logout{
+	width: 65px;
+	height:20px;
+	line-height: 20px;
+	color:#e1d1b9;
+	font-size: 14px;
+	padding: 5px 10px;
+	background: none;
+}
+.addShopcart{
+	margin-top: 7px;
+	margin-right: 20px;
+}
+.addShopcart a{
+	display: block;
+	width: 27px;
+	height: 20px;
+	background: url('../images/shopcart.jpg') 0 0 no-repeat;
+	background-size: contain;
+}
+
+/* teastore导航 */
 .indexBannerWrapper{
 	position: relative;
 	z-index: 10;
@@ -15,21 +135,21 @@
 	line-height: 35px;
 	color: #676767;
 	margin-left: 25px;
-}
-.bannerBar li a{
-	padding-right: 25px;
-	color: #676767;
-}
-.bannerBar li i{
-	font-style: normal;
-	font-size: 14px;
-}
-.bannerBar li a:hover{
-	font-weight: bold;
-}
-.bannerBar li.active span{
-	font-weight: bold;
-	padding-right: 15px;
+	a{
+		padding-right: 25px;
+		color: #676767;
+		&:hover{
+			font-weight: bold;
+		}
+	}
+	i{
+		font-style: normal;
+		font-size: 14px;
+	}
+	&.active span{
+		font-weight: bold;
+		padding-right: 15px;
+	}
 }
 .goodsListWrapper{
 	position: absolute;
@@ -40,9 +160,9 @@
 	top: 50px;
 	display: none;
 	border-top: 1px solid #ccc;
-}
-.goodsListWrapper.active{
-	display: block;
+	&.active{
+		display: block;
+	}
 }
 .goodsListsPos{
 	width: 1230px;
@@ -101,13 +221,13 @@
 .addShopcart{
 	margin-top: 7px;
 	margin-right: 20px;
-}
-.addShopcart a{
-	display: block;
-	width: 27px;
-	height: 20px;
-	background: url('../image/shopcart.jpg') 0 0 no-repeat;
-	background-size: contain;
+	a{
+		display: block;
+		width: 27px;
+		height: 20px;
+		background: url('../images/shopcart.jpg') 0 0 no-repeat;
+		background-size: contain;
+	}
 }
 .smallTea{
 	margin-top: 27px;

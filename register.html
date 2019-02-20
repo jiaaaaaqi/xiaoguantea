@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/common.css">
@@ -39,10 +39,10 @@
             <div class="loginMain">
                 <div class="loginBox">
                     <div class="userOperator users">
-                        <input type="phone" placeholder="中国(+86)" name="operator" id="operator" readonly="readonly">
+                        <input type="phone" placeholder="中国(+86)" name="operator" id="operator"  readonly="readonly">
                     </div>
                     <div class="users">
-                        <input type="text" placeholder="请输入您的手机号(必填)" name="phone" id="phone" maxlength="11">
+                        <input type="text" placeholder="请输入您的手机号(必填)" name="phone" id="phone" maxlength="11" >
                     </div>
                     <p class="commonBox" id="phoneTit"></p>
                     <div class="users">
@@ -61,8 +61,9 @@
                         <div class="fl"><canvas id="canvas" width="100px" height="40px"></canvas></div>
                         <p class="commonBox yzmReg" id="yzmTit"> </p>
                     </div>
-                    <div class="nextBtn" id="nextBtn" >下一步</div>
+                    <div class="nextBtn" id="nextBtn">下一步</div>
                 </div>
+                <script src="js/register.js"></script>
             </div>
             <div class="loginFooter">
                 <div class="clears">
@@ -93,7 +94,3 @@
     </footer>
 </body>
 </html>
-<script>
-
-</script>
-    <script src="js/register.js"></script>
