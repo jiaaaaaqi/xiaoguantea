@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/teastore.css">
     <script src="js/jquery.js"></script>
+    <script src="js/prolist.js"></script>
+    <script src="js/teastore.js"></script>
     <script src="js/common.js"></script>
     <title>在线商店</title>
 </head>
@@ -38,9 +40,9 @@
                         <input type="text" name="" placeholder="请输入内容">
                     </div>
                         <div class="fl personalBoxLT" id="personalBox">
-                        <a href="##" class="personal">个人中心</a>
-                        <ul class="logoutBox" style="display: none;">
-                            <li><a class="logout" href="##">退出</a></li>
+                        <a  class="personal">个人中心</a>
+                        <ul class="logoutBox">
+                            <li class="logout" id="logout">Login Out</li>
                         </ul>
                     </div>   
                 </div>
@@ -91,7 +93,7 @@
                                         <p>张成仁大师监制作品</p><b>￥1500.00</b>
                                     </li>
                                     <li>
-                                        <div class="imgBlock"><a href=""><img src="images/goods4.jpg" alt=""></a></div>
+                                        <div class="imgBlock"><a href=""><img src="images/goods04.jpg" alt=""></a></div>
                                         <h3>小罐茶 滇红茶 恭王府“天下第一福”新年定制礼茶 4g*10罐</h3>
                                         <p>小罐茶 滇红茶 恭王府“天下第一福”新年定制礼茶 4g*10罐</p><b>￥599.00</b>
                                     </li>
@@ -159,7 +161,7 @@
                             <div class="goodsListsPos">
                                 <ul class="clears">
                                     <li>
-                                        <div class="imgBlock"><a href=""><img src="images/goods4.jpg" alt=""></a></div>
+                                        <div class="imgBlock"><a href=""><img src="images/goods04.jpg" alt=""></a></div>
                                         <h3>小罐茶 大红袍 恭王府“天下第一福”新年定制礼茶 4g*10罐</h3>
                                         <p>小罐茶 大红袍 恭王府“天下第一福”新年定制礼茶 4g*10罐</p><b>￥599.00</b>
                                     </li>
@@ -221,23 +223,12 @@
                         </div>
                     </li>
                 </ul>   
-               <div class="addShopcart fr"> <a href="##"></a> </div>
+               <div class="addShopcart fr"> <a href="cart.html"></a> </div>
             </div>
         </div>
         <!-- 在线商店导航 end -->
         <div class="productListBox">
-            <ul class="productList clears">
-                <li class="fl" id="98">
-                    <div class="imgBox"><img src="images/goods07.jpg" alt=""></div><span class="bl name">小罐茶 特级乌龙茶高山乌龙茶叶礼盒装 40g 顺丰包邮</span><span class="bl slogan">小罐茶 特级乌龙茶高山乌龙茶叶礼盒装 40g</span><span class="bl price">¥500.00</span>
-                </li>
-                <li class="fl" id="101">
-                    <div class="imgBox"><img src="images/goods08.jpg" alt=""></div><span class="bl name">小罐茶【滇红】2.0金罐 10罐装</span><span class="bl slogan">张成仁大师监制作品</span><span class="bl price">¥500.00</span>
-                </li>
-                <li class="fl" id="108">
-                    <div class="imgBox"><img src="images/goods09.jpg" alt=""></div><span class="bl name">小罐茶【黄山毛峰】2.0金罐10罐装</span><span
-                        class="bl slogan">谢四十大师监制作品</span><span class="bl price">¥500.00</span>
-                </li>
-            </ul>            
+            
         </div>
         <div class="hotGoods">
             <h4>热门商品</h4>
@@ -277,26 +268,6 @@
             </ul>
         </div>
     </section>
-    <script>
-        $(function () {
-            $('.bannerBar>li').each(function () {
-                $(this).on('mouseover', function () {
-                    if ($(this).find($('.goodsListWrapper')).length > 0) {
-                        $(this).find($('.goodsListWrapper')).show();
-                    } else {
-                        return false;
-                    }
-                });
-                $(this).on('mouseout', function () {
-                    if ($(this).find($('.goodsListWrapper')).length > 0) {
-                        $(this).find($('.goodsListWrapper')).hide();
-                    } else {
-                        return false;
-                    }
-                });
-            });
-        });
-    </script>
     <!-- 在线商店页面结束 -->
 
     <!-- 底部开始 -->

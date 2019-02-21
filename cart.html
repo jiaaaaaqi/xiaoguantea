@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>goodsinfo</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/teastore.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/common.js"></script>
+</head>
+
+<body>
+    <!-- 头部 开始-->
+    <header>
+        <div class="top">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="logo" />
+                </a>
+            </div>
+            <nav>
+                <a href="##" class="nav-item">小罐茶</a>
+                <a href="##" class="nav-item">制茶大师</a>
+                <a href="##" class="nav-item">小罐茶具</a>
+                <a href="##" class="nav-item">限量版黑罐</a>
+                <a href="teastore.html" class="nav-item">在线商店</a>
+                <a href="##" class="nav-item">招商</a>
+                <div class="quick">
+                    <span></span>
+                    <a href="##" class="search"></a>
+                    <a href="login.html" class="user"></a>
+                    <a href="##" class="feedback"></a>
+                </div>
+                <div class="searchPersonal clears">
+                    <span class="line fl "></span>
+                    <div class="searchBoxS fl" id="searchBox">
+                        <span class="searchIcon"></span>
+                        <input type="text" name="" placeholder="请输入内容">
+                    </div>
+                        <div class="fl personalBoxLT" id="personalBox">
+                        <a  class="personal">个人中心</a>
+                        <ul class="logoutBox">
+                            <li class="logout" id="logout">Login Out</li>
+                        </ul>
+                    </div>   
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- 头部结束 -->
+    <!-- 在线商店导航 start -->
+    <div class="indexBannerWrapper">
+        <div class="indexBanner clears">
+            <ul class="bannerBar fl">
+                <li class="active"><a href="teastore.html">首页</a><i>·</i></li>
+                <li><a href="teastore.html">全部商品</a><i>·</i></li>
+                <li id="nav1">
+                    <a href="##">绿茶</a><i>·</i>
+                    <div class="goodsListWrapper">
+                        <div class="goodsListsPos">
+                            <ul class="clears">
+                                <li>
+                                    <div class="imgBlock"><a href=""><img src="images/goods03.jpg" alt=""></a></div>
+                                    <h3>小罐茶【小罐绿茶】2.0金罐10罐装</h3>
+                                    <p>许万富大师监制作品</p><b>￥500.00</b>
+                                </li>
+                                <li>
+                                    <div class="imgBlock"><a href=""><img src="images/goods02.jpg" alt=""></a></div>
+                                    <h3>小罐茶【小罐绿茶】2.0金罐20罐装</h3>
+                                    <p>许万富大师监制作品</p><b>￥1000.00</b>
+                                </li>
+                                <li>
+                                    <div class="imgBlock"><a href=""><img src="images/goods04.jpg" alt=""></a></div>
+                                    <h3>小罐茶 小罐绿 恭王府“天下第一福”新年定制礼茶4g*10罐</h3>
+                                    <p>小罐茶 小罐绿 恭王府“天下第一福”新年定制礼茶4g*10罐</p><b>￥599.00</b>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li id="nav2">
+                    <a href="##">红茶</a><i>·</i>
+                    <div class="goodsListWrapper">
+                        <div class="goodsListsPos">
+                            <ul class="clears">
+                                <li>
+                                    <div class="imgBlock"><a href=""><img src="images/goods05.jpg" alt=""></a></div>
+                                    <h3>小罐茶【滇红茶】2.0黑罐10罐装</h3>
+                                    <p>张成仁大师监制作品</p><b>￥1500.00</b>
+                                </li>
+                                <li>
+                                    <div class="imgBlock"><a href=""><img src="images/goods04.jpg" alt=""></a></div>
+                                    <h3>小罐茶 滇红茶 恭王府“天下第一福”新年定制礼茶 4g*10罐</h3>
+                                    <p>小罐茶 滇红茶 恭王府“天下第一福”新年定制礼茶 4g*10罐</p><b>￥599.00</b>
+                                </li>
+                                <li>
+                                    <div class="imgBlock"><a href=""><img src="images/goods02.jpg" alt=""></a></div>
+                                    <h3>小罐茶【滇红】2.0金罐 10罐装</h3>
+                                    <p>张成仁大师监制作品</p><b>￥500.00</b>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li id="nav3">
+                    <a href="##">黑茶</a><i>·</i>
+                    <div class="goodsListWrapper">
+                        <div class="goodsListsPos">
+                            <ul class="clears">
+                                <li>
+                                    <div class="imgBlock"><a href=""><img src="images/goods05.jpg" alt=""></a></div>
+                                    <h3>小罐茶 普洱熟茶 恭王府“天下第一福”新年定制礼茶 4g*10罐</h3>
+                                    <p>小罐茶 普洱熟茶 恭王府“天下第一福”新年定制礼茶 4g*10罐</p><b>￥599.00</b>
+                                </li>
+                                <li>
+                                    <div class="imgBlock"><a href=""><img src="images/goods02.jpg" alt=""></a></div>
+                                    <h3>小罐茶【普洱熟茶】10罐装</h3>
+                                    <p>邹炳良大师监制作品</p><b>￥500.00</b>
+                                </li>
+                                <li>
+                                    <div class="imgBlock"><a href=""><img src="images/goods08.jpg" alt=""></a></div>
+                                    <h3>小罐茶【普洱熟茶】2.0银罐10罐装</h3>
+                                    <p>邹炳良大师监制作品</p><b>￥248.00</b>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li id="nav4">
+                    <a href="##">白茶</a><i>·</i>
+                    <div class="goodsListWrapper">
+                        <div class="goodsListsPos">
+                            <ul class="clears">
+                                <li>
+                                    <div class="imgBlock"><a href=""><img src="images/goods06.jpg" alt=""></a></div>
+                                    <h3>小罐茶【白毫银针】20罐装</h3>
+                                    <p>林振传大师监制作品</p><b>￥1000.00</b>
+                                </li>
+                                <li>
+                                    <div class="imgBlock"><a href=""><img src="images/goods09.jpg" alt=""></a></div>
+                                    <h3>小罐茶 白毫银针 恭王府“天下第一福”新年定制礼茶 4g*10罐</h3>
+                                    <p>小罐茶 白毫银针 恭王府“天下第一福”新年定制礼茶 4g*10罐</p><b>￥599.00</b>
+                                </li>
+                                <li>
+                                    <div class="imgBlock"><a href=""><img src="images/goods11.jpg" alt=""></a></div>
+                                    <h3>小罐茶【白毫银针】2.0金罐 10罐装</h3>
+                                    <p>林振传大师监制作品</p><b>￥500.00</b>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li id="nav5">
+                    <a href="##">乌龙茶</a><i>·</i>
+                    <div class="goodsListWrapper">
+                        <div class="goodsListsPos">
+                            <ul class="clears">
+                                <li>
+                                    <div class="imgBlock"><a href=""><img src="images/goods04.jpg" alt=""></a></div>
+                                    <h3>小罐茶 大红袍 恭王府“天下第一福”新年定制礼茶 4g*10罐</h3>
+                                    <p>小罐茶 大红袍 恭王府“天下第一福”新年定制礼茶 4g*10罐</p><b>￥599.00</b>
+                                </li>
+                                <li>
+                                    <div class="imgBlock"><a href=""><img src="images/goods02.jpg" alt=""></a></div>
+                                    <h3>小罐茶 清香铁观音 恭王府“天下第一福”新年定制礼茶 4g*10罐</h3>
+                                    <p>小罐茶 清香铁观音 恭王府“天下第一福”新年定制礼茶 4g*10罐</p><b>￥599.00</b>
+                                </li>
+                                <li>
+                                    <div class="imgBlock"><a href=""><img src="images/goods03.jpg" alt=""></a></div>
+                                    <h3>小罐茶 浓香铁观音 恭王府“天下第一福”新年定制礼茶 4g*10罐</h3>
+                                    <p>小罐茶 浓香铁观音 恭王府“天下第一福”新年定制礼茶 4g*10罐</p><b>￥599.00</b>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li id="nav6">
+                    <a href="##">再加工茶</a><i>·</i>
+                    <div class="goodsListWrapper">
+                        <div class="goodsListsPos">
+                            <ul class="clears">
+                                <li>
+                                    <div class="imgBlock"><a href=""><img src="images/goods04.jpg" alt=""></a></div>
+                                    <h3>【进店必买】小罐茶 银罐20罐拼装礼盒</h3>
+                                    <p>进店必买</p><b>￥500.00</b>
+                                </li>
+                                <li>
+                                    <div class="imgBlock"><a href=""><img src="images/goods05.jpg" alt=""></a></div>
+                                    <h3>金罐经典拼装版 20罐礼盒装</h3>
+                                    <p>【进店必买】金罐经典拼装版 20罐礼盒装</p><b>￥1000.00</b>
+                                </li>
+                                <li>
+                                    <div class="imgBlock"><a href=""><img src="images/goods06.jpg" alt=""></a></div>
+                                    <h3>小罐茶 金罐茉莉花茶茶叶10罐礼盒装 40g</h3>
+                                    <p>小罐茶 金罐茉莉花茶茶叶10罐礼盒装 40g</p><b>￥500.00</b>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li id="nav7">
+                    <a href="##">商务茶具</a>
+                    <div class="goodsListWrapper">
+                        <div class="goodsListsPos">
+                            <ul class="clears">
+                                <li>
+                                    <div class="imgBlock"><a href="##"><img src="images/beijju01.jpg" alt=""></a></div>
+                                    <h3>小罐茶【长官杯】2.0香槟色</h3>
+                                    <p>商务茶具</p><b>￥1280.00</b>
+                                </li>
+                                <li>
+                                    <div class="imgBlock"><a href="##"><img src="images/beiju02.jpg" alt=""></a></div>
+                                    <h3>小罐茶旅行泡茶杯2.0版 冰雪白色</h3>
+                                    <p>小罐茶旅行泡茶杯2.0版 冰雪白色</p><b>￥798.00</b>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="addShopcart fr"> <a href="cart.html"></a> </div>
+        </div>
+    </div>
+    <!-- 在线商店导航 end -->
+    <div class="shopcartWrapper">
+        <div class="shopcartListBox">
+            <div class="allGoods">
+                <h2>全部商品</h2>
+            </div>
+        </div>
+        <div class="shopcartListTitBox">
+            <div class="shopcartListTit">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th align="left" width="53%">
+                                <input type="checkbox" class="selectAllGoods">
+                                <label>全选</label>
+                            </th>
+                            <th width="13%">单价（元）</th>
+                            <th width="12%">数量</th>
+                            <th width="12%">小计（元）</th>
+                            <th width="10%">操作</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="shopcartGoodsBox" data-id="100">
+            <div class="allGoods">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td align="left" width="53%">
+                                <div class="goodsNews clears">
+                                    <input type="checkbox" name="item_che" checked="">
+                                    <a href="##" class="fl"><img src="images/goods05.jpg"></a>
+                                    <div class="goodsDet fl">
+                                        <h3><a href="##">小罐茶【浓香铁观音】2.0金罐 10罐装</a></h3>
+                                    </div>
+                                </div>
+                            </td>
+                            <td width="13%">
+                                <span class="unitPrice">500.00</span>
+                            </td>
+                            <td width="12%">
+                                <div class="goodsNum clears">
+                                    <a href="javascript:void(0)" class="reductionNum">-</a>
+                                    <input type="text" name="" value="1" disabled="disabled">
+                                    <a href="javascript:void(0)" class="addNum">+</a>
+                                </div>
+                            </td>
+                            <td width="12%">
+                                <span class="subtotal">500.00</span>
+                            </td>
+                            <td width="10%">
+                                <a href="javascript:void(0)" class="deleteGoodsBtn">删除</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="selectAllWrapper">
+            <div class="settlementBox">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td align="left" width="50%">
+                                <input type="checkbox" class="selectAllGoods" canclick="0">
+                                <label>全选</label>
+                                <a href="javascript:void(0)" class="selectAllBtn" id="selectAllBtn">删除选中的商品</a>
+                            </td>
+                            <td align="right" width="50%">
+                                <div class="goSettle">
+                                    <span>已选择<b id="selectCheck">2</b>件商品</span>
+                                    <span>总价：<b id="totalMoney">1000.00</b></span>
+                                    <a href="/buy/order" class="settleBtn">去结算</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="js/shopcart.js"></script>
+    <!-- 底部开始 -->
+    <footer>
+        <div class="footerWrapper">
+            <div class="footer">
+                <div class="toEnsure">
+                    <img src="images/telephone.png">
+                    <span>(400-004-5028)</span>
+                    <img src="images/seven.png">
+                    <img src="images/fiften.png">
+                    <img src="images/sf.png">
+                </div>
+                <ul class="footerNav">
+                    <li><a href="javascript:void(0)">订单操作</a></li>
+                    <li><a href="javascript:void(0)" id="officialLetter">官方微信</a></li>
+                    <li><a href="javascript:void(0)">联系我们</a></li>
+                    <li><a href="javascript:void(0)">防伪查询</a></li>
+                    <li><a href="javascript:void(0)">零售网点</a></li>
+                </ul>
+            </div>
+            <a href="javascript:;" class="gotop" id="scroll">返回顶部</a>
+        </div>
+    </footer>
+    <!-- 底部结束 -->
+</body>
+
+</html>

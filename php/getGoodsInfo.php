@@ -32,9 +32,9 @@
 			"goodsName":"'.$query_row[1].'",
 			"goodsType":"'.$query_row[2].'",
 			"goodsPrice":"'.$query_row[3].'",
-			"goodsImg":"'.$query_row[4].'",
+			"goodsCount":"'.$query_row[4].'",
 			"goodsSlogan":"'.$query_row[5].'",
-			"goodsCount":"'$query_row[5]'"
+			"goodsImg":"'$query_row[6]'"
 		}';	
 	//4、关闭数据库
 	mysql_close($conn);

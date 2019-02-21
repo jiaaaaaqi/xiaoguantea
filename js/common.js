@@ -74,3 +74,22 @@ function removeCookie(key){
 	saveCookie(key,"",-1);
 }
 
+$(function () {
+	$('.bannerBar>li').each(function () {
+		$(this).on('mouseover', function () {
+			if ($(this).find($('.goodsListWrapper')).length > 0) {
+				$(this).find($('.goodsListWrapper')).show();
+			} else {
+				return false;
+			}
+		});
+		$(this).on('mouseout', function () {
+			if ($(this).find($('.goodsListWrapper')).length > 0) {
+				$(this).find($('.goodsListWrapper')).hide();
+			} else {
+				return false;
+			}
+		});
+	});
+});
+

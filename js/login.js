@@ -10,7 +10,7 @@ $(function(){
 				console.log(data);				
 				if(data=="1"){//登录成功！
 					//记录cookie
-					//saveCookie("username",$("#username").val(),7);
+					saveCookie("username",$("#username").val(),7);
 					location.href="teastore.html";
 				}else{
 					alert("登录失败，用户名或者密码不对！");

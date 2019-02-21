@@ -4,41 +4,41 @@ $("#phone").blur(function() {
   let phone = $("#phone").val();
   var dl = /(^[1][0-9]\d{9}$)/;
   var len = phone.length;
-
   //大陆手机号码
   if (len == 11) {
     if (!dl.exec(phone)) {
-      console.log(phone);
       $("#phoneTit").html("请输入正确的手机号");
-      $("#phone").focus();
-    } else {
-      checkUser($(phone));
+      $("#phone").focus();    
+    }else{
+      checkUser(phone);
     }
   } else {
     $("#phone").focus();
     $("#phoneTit").html("请输入11位手机号");
   }
-  function checkUser(phone) {
-    console.log(phone);
-    $.get("php/checkUser.php", phone, function(data) {
-      data == "0"
-        ? $("#phoneTit").html("用户名已存在，请更换用户名")
-        : $("#phoneTit").html(
-            "<font style='color:#A5C11B'>恭喜你，可以使用该用户名！</font>"
-          );
-    });
-  }
 });
+function checkUser(phone) {
+  $.get(
+    "php/checkUser.php",
+    {
+      "userId":phone
+    },
+    function(data){
+      if(data=="true"){
+        $("#phoneTit").html("<font style='color:#A5C11B'>恭喜你，可以使用该用户名！</font>" );					
+      }else{
+        $("#phoneTit").html("用户名已存在，请更换用户名")
+      }
+    }				
+  );
+}
 
 $("#password").blur(function() {
   let userpwd = $("#password").val();
-  console.log(userpwd);
   //验证密码
   var len = jmz.GetLength(rtrim(userpwd));
   if (len < 6 || len > 16) {
-    $("#pswTit").html(
-      "<font style='color:#F63B21'>密码长度为6-16个字符，区分大小写</font>"
-    );
+    $("#pswTit").html("密码长度为6-16个字符，区分大小写" );
     return false;
   } else {
     $("#pswTit").html("<font style='color:#A5C11B'>密码可用</font>");
@@ -107,7 +107,16 @@ function zhuche() {
       password: $("#password").val()
     },
     function(data) {
-		data == "0"?alert("注册失败"):location.href = "login.html";
+      if(data == "1"){
+        var conf = confirm("注册成功,点击确定跳转到登录页面");
+        if(conf){
+          location.href = "login.html";
+        }else{
+          return;
+        }           
+      }else{
+        alert("注册失败");
+      }
     }
   );
 }

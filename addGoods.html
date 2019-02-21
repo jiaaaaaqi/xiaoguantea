@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/teastore.css">
     <script src="js/jquery.js"></script>
-    <script src="js/cookie.js"></script>
-    <script src="js/login.js"></script>
-    <title>小罐茶-登录</title>
+    <title>Document</title>
+    <style>
+        .addGoodsinfo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0 30px;
+        }
+        .addGoodsinfo div{
+            color: #fff;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
+
 <body>
+    <!-- 头部 开始-->
     <header>
         <div class="top">
             <div class="logo">
@@ -30,35 +46,34 @@
                     <a href="login.html" class="user"></a>
                     <a href="##" class="feedback"></a>
                 </div>
+                <div class="searchPersonal clears">
+                    <span class="line fl "></span>
+                    <div class="searchBoxS fl" id="searchBox">
+                        <span class="searchIcon"></span>
+                    </div>
+                    <div class="fl personalBoxLT" id="personalBox">
+                        <a class="personal">个人中心</a>
+                        <ul class="logoutBox">
+                            <li class="logout" id="logout">Login Out</li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
-    <section>
-        <div class="loginWrapper">
-            <div class="loginTitle">小罐茶用户登录</div>
-            <div class="loginMain">
-                <div class="loginBox">
-                    <form method="post" action="">
-                        <div class="userInfo users">
-                            <input type="text" placeholder="请输入手机号码" name="username" id="username">
-                        </div>
-                        <p class="commonBox phoneLogBox"></p>
-                        <div class="userPassword users">
-                            <input type="password" placeholder="请输入您的密码" name="password" id="password">
-                        </div>
-                        <p class="commonBox passwordLogBox"></p>
-                        <div class="loginBtn" id="login">立即登陆</div>
-                    </form>
-                </div>
-            </div>
-            <div class="loginFooter">
-                <div class="clears">
-                    <a class="forgetPassword" href="##">忘记密码？</a>
-                    <p class="fr">如果您没有小罐茶账户，则可在此<a class="goRegister" href="register.html">注册</a></p>
-                </div>
-            </div>
-        </div>       
-    </section>
+    <!-- 头部结束 -->
+    <!-- addgoods -->
+    <div class="addGoodsinfo">
+        <div>商品编号：<input type="text" id="goodsId" value=""></div>
+        <div>商品名称：<input type="text" id="goodsName" value=""></div>
+        <div>商品类型：<input type="text" id="goodsType" value=""></div>
+        <div>商品价格：<input type="text" id="goodsPrice" value=""></div>
+        <div>商品数量：<input type="text" id="goodsCount" value=""></div>
+        <div>商品描述：<input type="text" id="goodsSlogan" value=""></div>
+        <div>商品图片：<input type="text" id="goodsImg" value=""></div>
+        <div><button id="addGoods">添加商品 </button></div>
+    </div>
+    <!-- 底部开始 -->
     <footer>
         <div class="footerWrapper">
             <div class="footer">
@@ -79,5 +94,8 @@
             </div>
         </div>
     </footer>
+    <!-- 底部结束 -->
 </body>
+<script src="js/addGoods.js"></script>
+
 </html>

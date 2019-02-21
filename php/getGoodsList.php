@@ -2,9 +2,9 @@
 	header("Content-Type:text/html;charset=utf-8");
 	//2、数据保存在数据库中
 	//1）、建立连接（搭桥）
-	$conn = mysql_connect("localhost","root","tea");	
+	$conn = mysql_connect("localhost","root","root");	
 	//2）、选择数据库（找目的地）
-	if(!mysql_select_db("shoppingcenter",$conn)){
+	if(!mysql_select_db("tea",$conn)){
 		die("数据库选择失败".mysql_error());
 	}
 	//3）、传输数据（过桥）
@@ -29,9 +29,9 @@
 			"goodsName":"'.$query_row[1].'",
 			"goodsType":"'.$query_row[2].'",
 			"goodsPrice":"'.$query_row[3].'",
-			"goodsImg":"'.$query_row[4].'",
+			"goodsCount":"'.$query_row[4].'",
 			"goodsSlogan":"'.$query_row[5].'",
-			"goodsCount":"'$query_row[5]'"
+			"goodsImg":"'.$query_row[6].'"
 		}';
 		
 		$query_row = mysql_fetch_array($result);
