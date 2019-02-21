@@ -123,11 +123,12 @@
 
 /* teastore导航 */
 .indexBannerWrapper{
+	max-width: 1600px;
 	position: relative;
 	z-index: 10;
 }
 .indexBanner{
-	width: 1230px;
+	max-width: 1230px;
 	margin: 0 auto;
 	padding: 20px 0;
 }
@@ -670,4 +671,98 @@
 		text-align: center;
 	}
 }
+/*商品详情*/
+.contentWrapper{
+	width: 1230px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
 
+/* 浮层 */
+.alertBox{
+	position: absolute;
+	padding: 4px;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.3);
+	z-index:100;
+	display: none;
+}
+.deleteBox{
+	width: 535px;
+}
+.alertTit{
+	height: 47px;
+	line-height: 47px;
+	padding: 0 28px;
+	color: #fff;
+	background: #9d6d4a;
+	position: relative;
+	h3{
+		font-size: 18px;
+		color: #fff;
+		font-weight: normal;
+	}
+	.alertCloseBtn{
+		position: absolute;
+		right: 28px;
+		top: 15px;
+		width: 17px;
+		height: 17px;
+		cursor: pointer;
+		&:before{
+			position: absolute;
+			left: 8px;
+			top: -2px;
+			content: '';
+			width: 1px;
+			height: 20px;
+			background: #fff;
+			transform: rotate(45deg);
+		}
+		&:after{
+			position: absolute;
+			right: 8px;
+			top: -2px;
+			content: '';
+			width: 1px;
+			height: 20px;
+			background: #fff;
+			transform: rotate(-45deg);
+		}
+	}
+}
+.deleteGoodsBox{
+	padding: 42px 57px 37px;
+	background: #fff;
+}
+.isOrNotDelete{
+	cite{
+		display: inline-block;
+		width: 75px;
+		height: 68px;
+		background: url('../images/deleteIcon.png') 0 0 no-repeat;
+		vertical-align: middle;
+	}
+	span{
+		font-size: 24px;
+		color: #9d6d4a;
+		margin-left: 20px;
+		font-weight: bold;
+	}
+} 
+.deleteBtnBox{
+	text-align: right;
+	margin-top: 33px;
+	a{
+		display: inline-block;
+		width: 143px;
+		height: 34px;
+		line-height: 34px;
+		text-align: center;
+		background: #9d6d4a;
+		color: #fff;
+		font-size: 18px;
+		border-radius: 5px;
+	}
+}
