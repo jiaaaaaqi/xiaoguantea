@@ -12,8 +12,10 @@ $(function(){
 			type:'post',
 			cache:false,
 			success:function(data) {//返回数据后调用方法向页面数加载据
-				pingData(data);
-
+				//console.log(data)
+				var obj = JSON.parse(data);
+				pingData(obj);
+				
 			},
 			error : function(e) {
 				console.log(e);
@@ -22,22 +24,20 @@ $(function(){
     }
     //刚进入页面的时候加载默认数据
     getData();
-
     //向页面数加载据
-    function pingData(data) {
-		//var data = JSON.stringify(data,':');
-		console.log(data);
+ function pingData(data) {
+		console.log(typeof data);
     	//页码
     	//页面内容
     	var content = '';
-    	//var i = 0;
+    	var i = 0;
 		$.each(data, function(i,a) {
 			if (i%3 == 0) {
         		content += '<ul class="productList clears">';
 			}
 			content += '<li class="fl" id="'+a.goodsName+'">'+
 						'<div class="imgBox">'+
-						'<img src="/'+a.goodsImg+'">'+
+						'<img src="'+a.goodsImg+'">'+
 						'</div>'+
 						'<span class="bl name">'+a.goodsName+'</span>'+
 						'<span class="bl slogan">'+a.goodsSlogan+'</span>'+
