@@ -1,8 +1,9 @@
 $(function(){
-	// $(".productListBox").delegate('li',function(){
-	// 	var pid= $(this).attr('id');
-	// 	location.href = 'goodsInfo?id='+pid;
-	// })
+	$(".productListBox").delegate('li','click',function(){
+		var pid= $(this).attr('id');
+		alert(pid);
+		location.href = 'goodsInfo?id='+pid;
+	})
 
 	//通过ajax获取数据
     function getData() {
@@ -14,8 +15,7 @@ $(function(){
 			success:function(data) {//返回数据后调用方法向页面数加载据
 				//console.log(data)
 				var obj = JSON.parse(data);
-				pingData(obj);
-				
+				pingData(obj);				
 			},
 			error : function(e) {
 				console.log(e);
@@ -35,7 +35,7 @@ $(function(){
 			if (i%3 == 0) {
         		content += '<ul class="productList clears">';
 			}
-			content += '<li class="fl" id="'+a.goodsName+'">'+
+			content += '<li class="fl" id="'+a.goodsId+'">'+
 						'<div class="imgBox">'+
 						'<img src="'+a.goodsImg+'">'+
 						'</div>'+

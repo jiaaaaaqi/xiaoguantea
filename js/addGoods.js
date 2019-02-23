@@ -28,7 +28,6 @@ $("#addGoods").click(function () {
                 alert("保存成功");
             } else {
                 alert(data);
-
             }
         }
     );

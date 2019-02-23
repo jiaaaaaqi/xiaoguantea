@@ -117,7 +117,6 @@ $(function(){
                totalMoney += parseFloat($(this).parents('.shopcartGoodsBox').find($('.unitPrice')).text());
                totalMoney = totalMoney.toFixed(2);
                goodsCount++;
-               // totalMoney = (parseInt(totalMoney*100)/100).toFixed(2);
                $('#totalMoney').text(totalMoney);
                $('#selectCheck').text(goodsCount);
            }

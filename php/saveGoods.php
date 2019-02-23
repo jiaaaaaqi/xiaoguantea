@@ -21,7 +21,7 @@
 		die("数据库选择失败".mysql_error());
 	};
 	
-	//3）、传输数据（过桥）
+	//d
 	$sqlstr = "insert into goodsInfo values('".$goodsId."','".$goodsName."','".$goodsType."'
 	,'".$goodsPrice."','".$goodsCount."','".$goodsSlogan."','".$goodsImg."')";
 	
