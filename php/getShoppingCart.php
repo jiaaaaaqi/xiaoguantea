@@ -1,13 +1,13 @@
 <?php
 	header("Content-Type:text/html;charset=utf-8");
-	$username = $_REQUEST['username'];
+	$username = $_POST['userName'];
 	
 	//2、数据保存在数据库中
 	//1）、建立连接（搭桥）
-	$conn = mysql_connect("localhost","root","qianfeng");
+	$conn = mysql_connect("localhost","root","root");
 	
 	//2）、选择数据库（找目的地）
-	if(!mysql_select_db("shoppingcenter",$conn)){
+	if(!mysql_select_db("tea",$conn)){
 		die("数据库选择失败".mysql_error());
 	};
 	
@@ -36,15 +36,15 @@
             "goodsId":"'.$query_row[0].'",
 			"goodsName":"'.$query_row[1].'",
 			"goodsPrice":"'.$query_row[3].'",
-			"goodsImg":"'.$query_row[4].'",
-			"goodsCount":"'.$query_row[5].'"
+			"goodsImg":"'.$query_row[6].'",
+			"goodsNum":"'.$query_row[9].'"
 		}';	
 				
 		$query_row = mysql_fetch_array($result);
 		if($query_row){
 			$str = $str.",";
 		}
-	}
+	
 	$str = $str."]";
 	//4、关闭数据库
 	mysql_close($conn);

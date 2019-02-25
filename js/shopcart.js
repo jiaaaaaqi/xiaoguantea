@@ -2,16 +2,25 @@ $(function(){
     var totalMoney = 0;
     var goodsCount = 0;
     var allgoodsCount = 0;
-    var length = $('.shopcartGoodsBox').length;
-
-    function getData() {
-        $.post("php/getShoppingCart.php", data,
-        function (data, textStatus, jqXHR) {
-            
-        },
-        "dataType"
-        );
+    var length = $('.shopcartGoodsBox').length;  
+    var username = getCookie('username');
+    if(username!=''){
+        getData();
+        function getData() {
+            $.post("php/getShoppingCart.php", {'userName':username},
+            function (data) {
+                console.log(data);
+                console.log(username);
+                var dataObj = JSON.parse(data);
+                let htmlStr = '';
+                htmlStr += '<div class="shopcartGoodsBox" data-id="'+dataObj.goodsId+'"><div class="allGoods"><table><tbody><tr> <td align="left" width="53%"><div class="goodsNews clears"><input type="checkbox" name="item_che" checked=""><a href="goodsInfo.htm?id='+dataObj.goodsId+'" +class="fl"><img src="'+dataObj.goodsImg+'"></a><div class="goodsDet fl"><h3><a href="goodsInfo.htm?id='+dataObj.goodsId+'">'+dataObj.goodsName+'</a></h3></div></div></td><td width="13%"><span class="unitPrice">'+dataObj.goodsPrice+'</span></td><td width="12%"><div class="goodsNum clears"><a href="javascript:void(0)" class="reductionNum">-</a><input type="text" name="" value="'+dataObj.goodsNum+'" disabled="disabled"><a href="javascript:void(0)" class="addNum">+</a></div><a href="javascript:void(0)" class="deleteGoodsBtn">删除</a></td></tr></tbody></table></div></div>';
+            $('.shopcartWrapperList').append(htmlStr);
+            }      
+            );
+        }
     }
+
+
     $('.shopcartGoodsBox').each(function(){
         if($(this).find($(':checkbox')).attr('checked')){
             allgoodsCount++;

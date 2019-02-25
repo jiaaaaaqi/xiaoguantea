@@ -29,7 +29,6 @@
 			"goodsName":"'.$query_row[1].'",
 			"goodsType":"'.$query_row[2].'",
 			"goodsPrice":"'.$query_row[3].'",
-			"goodsCount":"'.$query_row[4].'",
 			"goodsSlogan":"'.$query_row[5].'",
 			"goodsImg":"'.$query_row[6].'"
 		}';

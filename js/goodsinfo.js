@@ -31,16 +31,16 @@ $(function () {
             });
             $('#addShopCart').on('click', function () {
                 var username = getCookie('username');
-                var goodsCount = $("#goodsNum").val();
+                var goodsNum = $("#goodsNum").val();
                 if (username != '') {
-                    //console.log(username+id+goodsCount);
-                    $.post("php/updateGoodsCount.php", { 'username': username, 'goodsId': id, 'goodsCount': goodsCount },
+                    //console.log(username+id+goodsNum);
+                    $.post("php/addShoppingCart.php", { 'username': username, 'goodsId': id, 'goodsNum': goodsNum },
                         function (data) {
                             console.log(data);
                             if (data == "1") {
                                 alert("商品已加入购物车");
                             } else {
-
+                                alert("error!!!");
                             }
                         }
                     );
