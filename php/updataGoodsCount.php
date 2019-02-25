@@ -1,9 +1,9 @@
 <?php
 	header("Content-Type:text/html;charset=utf-8");
 	//1、接受客户端的数据（用户输入的数据）
-	$username   = $_REQUEST['username'];
-	$goodsId   = $_REQUEST['goodsId'];
-	$goodsCount = $_REQUEST['goodsCount'];
+	$username   = $_GET['username'];
+	$goodsId   = $_GET['goodsId'];
+	$goodsCount = $_GET['goodsCount'];
 	
 	//2、数据保存在数据库中
 	//1）、建立连接（搭桥）

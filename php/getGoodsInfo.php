@@ -1,7 +1,7 @@
 <?php
 	header("Content-Type:text/html;charset=utf-8");
 	
-	$goodsId   = $_REQUEST['goodsId'];	
+	$goodsId   = $_GET['goodsId'];	
 	//2、数据保存在数据库中
 	//1）、建立连接（搭桥）
 	$conn = mysql_connect("localhost","root","root");
@@ -28,13 +28,9 @@
 	
 	$query_row = mysql_fetch_array($result);//游标下移,拿出结果集中的某一行，返回值是拿到的行；
 		$str = $str.'{
-            "goodsId":"'.$query_row[0].'",
 			"goodsName":"'.$query_row[1].'",
-			"goodsType":"'.$query_row[2].'",
 			"goodsPrice":"'.$query_row[3].'",
-			"goodsCount":"'.$query_row[4].'",
-			"goodsSlogan":"'.$query_row[5].'",
-			"goodsImg":"'$query_row[6]'"
+			"goodsImg":"'.$query_row[6].'"
 		}';	
 	//4、关闭数据库
 	mysql_close($conn);

@@ -2,7 +2,7 @@ $(function(){
 	$(".productListBox").delegate('li','click',function(){
 		var pid= $(this).attr('id');
 		alert(pid);
-		location.href = 'goodsInfo?id='+pid;
+		location.href = 'goodsInfo.html?id='+pid;
 	})
 
 	//通过ajax获取数据

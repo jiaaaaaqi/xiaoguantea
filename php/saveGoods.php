@@ -1,7 +1,6 @@
 <?php
 	header("Content-Type:text/html;charset=utf-8");
 	//1、接受客户端的数据（用户输入的数据）
-	$goodsId   = $_REQUEST['goodsId'];
 	$goodsName = $_REQUEST['goodsName'];
 	$goodsType = $_REQUEST['goodsType'];
 	$goodsPrice = $_REQUEST['goodsPrice'];
@@ -20,9 +19,8 @@
 	if(!mysql_select_db("tea",$conn)){
 		die("数据库选择失败".mysql_error());
 	};
-	
 	//d
-	$sqlstr = "insert into goodsInfo values('".$goodsId."','".$goodsName."','".$goodsType."'
+	$sqlstr = "insert into goodsInfo values('','".$goodsName."','".$goodsType."'
 	,'".$goodsPrice."','".$goodsCount."','".$goodsSlogan."','".$goodsImg."')";
 	
 	$count = mysql_query($sqlstr,$conn);
@@ -34,7 +32,7 @@
 	
 	//3、给客户端返回（响应）一个注册成功！
 	if($count>0){
-	    echo "保存成功";
+	    echo "商品信息保存成功";
 	}
 	
 ?>

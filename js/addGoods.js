@@ -4,8 +4,7 @@ $(function() {
             "goodsId": $("#goodsId").val()
         },
         function (data) {
-            if (data == "1") {
-                
+            if (data == "1") {              
             } else {
                 alert("该商品编号已被使用，请输入不重复的商品编号");
             }
