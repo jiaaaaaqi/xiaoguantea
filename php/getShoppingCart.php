@@ -31,15 +31,13 @@
 	$str="[";
 	
 	$query_row = mysql_fetch_array($result);//游标下移,拿出结果集中的某一行，返回值是拿到的行；
-	while($query_row){
+	while($query_row)
 		$str = $str.'{
             "goodsId":"'.$query_row[0].'",
 			"goodsName":"'.$query_row[1].'",
-			"goodsType":"'.$query_row[2].'",
 			"goodsPrice":"'.$query_row[3].'",
 			"goodsImg":"'.$query_row[4].'",
-			"goodsSlogan":"'.$query_row[5].'",
-			"goodsCount":"'$query_row[5]'"
+			"goodsCount":"'.$query_row[5].'"
 		}';	
 				
 		$query_row = mysql_fetch_array($result);

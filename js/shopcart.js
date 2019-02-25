@@ -2,7 +2,16 @@ $(function(){
     var totalMoney = 0;
     var goodsCount = 0;
     var allgoodsCount = 0;
-   var length = $('.shopcartGoodsBox').length;
+    var length = $('.shopcartGoodsBox').length;
+
+    function getData() {
+        $.post("php/getShoppingCart.php", data,
+        function (data, textStatus, jqXHR) {
+            
+        },
+        "dataType"
+        );
+    }
     $('.shopcartGoodsBox').each(function(){
         if($(this).find($(':checkbox')).attr('checked')){
             allgoodsCount++;
@@ -82,7 +91,7 @@ $(function(){
            var allnum = 0;
            $.ajax({
                type:"POST",
-               url:"php/updataGoodsCount.php",
+               url:"php/updateGoodsCount.php",
                dataType:"json",
                async: false,
                data:{id:id,status:status,num:num},
@@ -134,9 +143,6 @@ $(function(){
            return false;
        }
        defaultNumber--;
-       // if(defaultNumber<1){
-       // 	defaultNumber = 1;
-       // }
        subtotal = (parseInt(unitPrice * defaultNumber*100)/100).toFixed(2);
        $(this).parents('.allGoods').find($('.goodsNum input')).val(defaultNumber);
        $(this).parents('.allGoods').find($('.subtotal')).text(subtotal);
@@ -175,7 +181,7 @@ $(function(){
     function pdel(pid){
         $.ajax({
             type:"POST",
-            url:"/buy/cartDel",
+            url:"php/updataGoodsCount.php",
             dataType:"json",
             data:{id:pid},
             success:function(data){
