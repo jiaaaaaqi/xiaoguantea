@@ -1,7 +1,6 @@
 <?php
 	header("Content-Type:text/html;charset=utf-8");
 	$username = $_POST['userName'];
-	
 	//2、数据保存在数据库中
 	//1）、建立连接（搭桥）
 	$conn = mysql_connect("localhost","root","root");
@@ -31,7 +30,7 @@
 	$str="[";
 	
 	$query_row = mysql_fetch_array($result);//游标下移,拿出结果集中的某一行，返回值是拿到的行；
-	while($query_row)
+	while($query_row){
 		$str = $str.'{
             "goodsId":"'.$query_row[0].'",
 			"goodsName":"'.$query_row[1].'",
@@ -44,7 +43,7 @@
 		if($query_row){
 			$str = $str.",";
 		}
-	
+	}
 	$str = $str."]";
 	//4、关闭数据库
 	mysql_close($conn);

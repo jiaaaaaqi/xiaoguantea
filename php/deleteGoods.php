@@ -1,8 +1,8 @@
 <?php
 	header("Content-Type:text/html;charset=utf-8");
 	//1、接受客户端的数据（用户输入的数据）
-	$vipName   = $_REQUEST['username'];
-	$goodsId   = $_REQUEST['goodsId'];
+	$username   = $_POST['username'];
+	$goodsId   = $_POST['goodsId'];
 	
 	//2、数据保存在数据库中
 	//1）、建立连接（搭桥）
